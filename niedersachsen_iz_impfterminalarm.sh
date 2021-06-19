@@ -80,7 +80,9 @@ while true; do
   curl -s https://www.impfportal-niedersachsen.de/portal/rest/appointments/findVaccinationCenterListFree/${zipcode}\?stiko\=\&count\=1 > ${tmpfile}
   if cat ${tmpfile} | jq '.resultList[].outOfStock' | grep -qv "true"; then
     freeSlots=$(cat ${tmpfile} | jq '.resultList[].freeSlotSizeOnline')
-    aplay "$sound_file" > /dev/null 2>&1
+    if ${play_sound}; then
+      aplay "$sound_file" > /dev/null 2>&1
+    fi
     current_msg=$(printf "$slots_free_msg_template" ${freeSlots} ${zipcode})
 
     if ! ${alarm_already_notified}; then
