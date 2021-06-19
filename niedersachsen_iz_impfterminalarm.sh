@@ -4,7 +4,6 @@ function usage() {
   echo "Usage: bash $0 -z ZIPCODE [ -s SOUND_FILE -r MAIL_RCPT -f GMAIL_MAILFROM -p GMAIL_SMTPAUTH_PASSWORD ]"
 }
 
-show_usage=false
 while getopts ":r:z:s:f:p:h" opt; do
   case ${opt} in
     z) zipcode="$OPTARG"
