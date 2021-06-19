@@ -37,7 +37,7 @@ Zum Starten im Hintergrund kann z.B. das Kommando *nohup* genutzt werden.
 ## Parameter
 
 - -z: Postleitzahl des Nutzers (muss immer angegeben werden, das zuständige Impfzentrum wird damit ermittelt)
-- -s: Sounddatei, wird abgespielt falls freie Termine gefunden werden
+- -s: Sounddatei, wird abgespielt falls freie Termine gefunden werden (z.B. eine der wav - Dateien unter */usr/share/sounds/*)
 - -r: E-Mail Adresse, an die Benachrichtigungen über freie Termine versandt werden
 - -f: Absendeadresse für die E-Mail Benachrichtigungen (wird auch für Anmeldung an GMail genutzt)
 - -p: GMail Passwort für den Versand der E-Mail (Empfehle Verwendung von App - Password, kann im Google - Konto erzeugt werden)
